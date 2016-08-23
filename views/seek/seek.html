@@ -1,0 +1,20 @@
+
+<ion-view view-title="搜索" id="seek-bunSeek" ng-controller="seekCtrl">
+    <ion-nav-buttons side="right">
+        <div class="button button-calm button-clear" style="color:#fff;font-size: 14px;">自助添书</div>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader item-input-inset" style="background: #ddd;">
+        <label class="item-input-wrapper">
+            <i class=" icon ion-search"></i>
+            <input type="text" placeholder="输入想看的小说名字/作者名字">
+            <!--<i class=" icon ion-ios-close-empty"></i>-->
+        </label>
+        <div class="button button-clear" style="color:red;">搜索</div>
+    </div>
+    <ion-content class="has-header has-subheader">
+        <h4 style="color: red;">大家都在搜</h4>
+        <div class="button button-balanced button-outline seekBut"
+             ng-repeat="product in products">{{product.title}}</div>
+    </ion-content>
+
+</ion-view>
